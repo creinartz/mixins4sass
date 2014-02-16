@@ -1,0 +1,17 @@
+/**
+ * @description
+ * Generates background rgba with background ie fallback
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include background-opacity(#333, 0.5);
+ *   }
+ */
+
+@mixin background-rgba($color, $opacity: 0.5)
+{
+    background: $color; /* fallback */
+    background: rgba($color, $opacity);
+}
