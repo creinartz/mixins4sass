@@ -6,7 +6,7 @@
  *
  * @example
  *   .selector {
- *     @include background-opacity(#333, 0.5);
+ *     @include background-rgba(#333, 0.5);
  *   }
  */
 
@@ -14,6 +14,27 @@
 {
     background: $color; /* fallback */
     background: rgba($color, $opacity);
+}
+
+
+/**
+ * @description
+ * Disables user selection on element
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include disable-user-select;
+ *   }
+ */
+
+@mixin disable-user-select
+{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 
@@ -34,4 +55,63 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+/**
+ * @description
+ * Generates transform properties
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include transform(rotate(-45deg));
+ *   }
+ */
+
+@mixin transform ($values)
+{
+    -webkit-transform: $values;
+    -ms-transform: $values;
+    transform: $values;
+}
+
+
+/**
+ * @description
+ * Generates transition properties
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include transition(all 0.5s ease-in);
+ *   }
+ */
+@mixin transition ($values)
+{
+    -webkit-transition: $values;
+    transition: $values;
+}
+
+
+/**
+ * @description
+ * super fancy vertical align
+ *
+ * @author creinartz
+ * http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+ *
+ * @example
+ *   .selector {
+ *     @include vertical-align;
+ *   }
+ */
+
+@mixin vertical-align
+{
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
 }
