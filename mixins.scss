@@ -37,6 +37,26 @@
   user-select: none;
 }
 
+/**
+ * @description
+ * Generates opacity properties for most browsers.
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include opacity(0.5);
+ *   }
+ */
+
+@mixin opacity($fValue)
+{
+  opacity:        $fValue; /* standard: ff gt 1.5, opera, safari */
+  $fValue: $fValue * 100;
+  -ms-filter: "alpha(opacity=#{$fValue})"; /* IE8 */
+  filter: alpha(opacity=#{$fValue}); /* IE 5-7 */
+}
+
 
 /**
  * @description
