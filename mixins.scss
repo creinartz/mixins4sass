@@ -31,10 +31,10 @@
 
 @mixin disable-user-select
 {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 /**
@@ -51,10 +51,10 @@
 
 @mixin opacity($fValue)
 {
-  opacity:        $fValue; /* standard: ff gt 1.5, opera, safari */
-  $fValue: $fValue * 100;
-  -ms-filter: "alpha(opacity=#{$fValue})"; /* IE8 */
-  filter: alpha(opacity=#{$fValue}); /* IE 5-7 */
+    opacity:        $fValue; /* standard: ff gt 1.5, opera, safari */
+    $fValue: $fValue * 100;
+    -ms-filter: "alpha(opacity=#{$fValue})"; /* IE8 */
+    filter: alpha(opacity=#{$fValue}); /* IE 5-7 */
 }
 
 
