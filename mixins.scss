@@ -15,3 +15,23 @@
     background: $color; /* fallback */
     background: rgba($color, $opacity);
 }
+
+
+/**
+ * @description
+ * Produces text-overflow ellipsis on one line text
+ *
+ * @author creinartz
+ *
+ * @example
+ *   .selector {
+ *     @include text-overflow-ellipsis;
+ *   }
+ */
+
+@mixin text-overflow-ellipsis
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
