@@ -1,6 +1,6 @@
 mixins4sass
 ===========
 
-useful mixins for sass
+some useful mixins for sass
 
 
