@@ -153,3 +153,15 @@
     @content;
   }
 }
+
+/**
+* add the most important class automatically
+*
+* author janvt
+*
+**/
+@mixin most-important-class-ever() {
+    &.x {
+        
+    }
+}
