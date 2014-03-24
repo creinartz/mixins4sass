@@ -161,7 +161,8 @@
 *
 **/
 @mixin most-important-class-ever() {
-    &.x {
-        
+    &.x
+    {
+        @content;
     }
 }
