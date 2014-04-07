@@ -10,8 +10,7 @@
  *   }
  */
 
-@mixin background-rgba($color, $opacity: 0.5)
-{
+@mixin background-rgba($color, $opacity: 0.5) {
     background: $color; /* fallback */
     background: rgba($color, $opacity);
 }
@@ -29,8 +28,7 @@
  *   }
  */
 
-@mixin disable-user-select
-{
+@mixin disable-user-select {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -49,8 +47,7 @@
  *   }
  */
 
-@mixin opacity($fValue)
-{
+@mixin opacity($fValue) {
     opacity:        $fValue; /* standard: ff gt 1.5, opera, safari */
     $fValue: $fValue * 100;
     -ms-filter: "alpha(opacity=#{$fValue})"; /* IE8 */
@@ -70,8 +67,7 @@
  *   }
  */
 
-@mixin text-overflow-ellipsis
-{
+@mixin text-overflow-ellipsis {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -90,8 +86,7 @@
  *   }
  */
 
-@mixin transform ($values)
-{
+@mixin transform ($values) {
     -webkit-transform: $values;
     -ms-transform: $values;
     transform: $values;
@@ -109,8 +104,7 @@
  *     @include transition(all 0.5s ease-in);
  *   }
  */
-@mixin transition ($values)
-{
+@mixin transition ($values) {
     -webkit-transition: $values;
     transition: $values;
 }
@@ -129,8 +123,7 @@
  *   }
  */
 
-@mixin vertical-align
-{
+@mixin vertical-align {
     position: relative;
     top: 50%;
     @include transform(translateY(-50%));
@@ -161,8 +154,7 @@
  *
  */
 @mixin most-important-class-ever() {
-    &.x
-    {
+    &.x {
         @content;
     }
 }
@@ -291,8 +283,7 @@
 // position
 //
 
-@mixin position-value($side, $value)
-{
+@mixin position-value($side, $value) {
     @if $side == leading {
         #{$leading}: $value;
     } @else if $side == trailing {
