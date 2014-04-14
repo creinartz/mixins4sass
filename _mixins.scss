@@ -255,6 +255,34 @@
     }
 }
 
+@mixin border-width($top, $trail: null, $bottom: null, $lead: null) {
+    @if $trail == null {
+        $trail: $top;
+    }
+
+    @if $bottom == null {
+        $bottom: $top;
+    }
+
+    @if $lead== null {
+        $lead: $trail;
+    }
+
+    @if $leading == left {
+        border-width: $top $trail $bottom $lead;
+    } @else if $leading == right{
+        border-width: $top $lead $bottom $trail;
+    }
+}
+
+@mixin border-radius($leadingtop, $trailingtop, $trailingbottom, $leadingbottom) {
+    @if $leading == left {
+        border-radius: $leadingtop $trailingtop $trailingbottom $leadingbottom;
+    } @else if $leading == right{
+        border-radius: $trailingtop $leadingtop $leadingbottom $trailingbottom;
+    }
+}
+
 @mixin float($side)  {
     @if $side == leading {
         float: $leading;
