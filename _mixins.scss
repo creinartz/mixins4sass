@@ -291,6 +291,14 @@
     }
 }
 
+@mixin clear($side)  {
+    @if $side == leading {
+        clear: $leading;
+    } @else if $side == trailing {
+        clear: $trailing;
+    }
+}
+
 @mixin text-align($side) {
     @if $side == leading {
         text-align: $leading;
